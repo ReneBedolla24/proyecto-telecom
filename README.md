@@ -59,6 +59,10 @@ Se desarrolló un dashboard interactivo para visualizar el comportamiento de los
 * Tipo de contrato
 * Método de pago
 
+### Vista previa del dashboard final
+
+(./5_dashboard_export/dashboard.png)
+
 ## Insights clave
 
 * Se identificó una alta tasa de cancelación (73%), lo que representa una oportunidad crítica de mejora
