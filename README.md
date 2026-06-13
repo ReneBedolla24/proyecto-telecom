@@ -34,6 +34,52 @@ La limpieza y transformación de los datos se realizó en SQL, incluyendo:
 * Creación de campos calculados
 * Desarrollo de consultas y procedimientos para análisis
 
+## SQL Queries destacadas
+
+### Porcentaje de clientes que utilizan techsupport
+
+```sql
+SELECT 
+  COUNT(*) AS total_con_support,
+  ROUND(
+    COUNT(*) * 100.0 / (SELECT COUNT(*) FROM customers_info),
+    2
+  ) AS porcentaje_support
+FROM customers_info
+WHERE tech_support = "Yes";
+```
+Identifica el porcentaje de clientes que han utilizado techsupport, útil para identificar fallas en el servicio y su relación con el abandono de los clientes o su permanencia
+
+### Tipo de contrato con mas clientes
+
+```sql
+
+select contract, count(*) as total
+from customers_info
+group by contract
+order by total desc;
+
+```
+
+Seleccionamos los tipos de contrato y la cantidad de clientes, es importante para saber que tipo de contrato es más atractivo y retiene mas clientes.
+
+### Porcentaje y total de clientes con abandono
+
+```sql
+SELECT 
+  COUNT(*) AS total_abandonos,
+  ROUND(
+    COUNT(*) * 100.0 / (SELECT COUNT(*) FROM customers_info),
+    2
+  ) AS porcentaje_abandonos
+FROM customers_info
+WHERE subscription_status = "No";
+
+```
+
+Métrica clave para identificar el abandono de clientes en total y en porcentaje
+
+
 ## Métricas clave (KPIs)
 
 * Total de clientes: 7,032
