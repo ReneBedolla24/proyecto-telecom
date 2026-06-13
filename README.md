@@ -61,7 +61,8 @@ Se desarrolló un dashboard interactivo para visualizar el comportamiento de los
 
 ### Vista previa del dashboard final
 
-![Vista del dashboard](./5_dashboard_export/dashboard.png)
+![dashboard](./5_dashboard_export/dashboard.png)
+
 
 ## Insights clave
 
